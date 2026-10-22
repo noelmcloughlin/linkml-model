@@ -1,5 +1,4 @@
 # Auto generated from array.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-08-31T23:36:27
 # Schema: arrays
 #
 # id: https://w3id.org/linkml/lib/arrays
@@ -55,7 +54,7 @@ from rdflib import (
 
 from .types import Integer, String
 
-metamodel_version = "1.11.0"
+metamodel_version = "1.12.0"
 version = None
 
 # Namespaces

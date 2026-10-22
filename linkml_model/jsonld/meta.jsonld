@@ -1249,7 +1249,11 @@
       "description": "status of the element",
       "examples": [
         {
-          "value": "bibo:draft",
+          "value": "testing",
+          "@type": "Example"
+        },
+        {
+          "value": "unstable",
           "@type": "Example"
         }
       ],
@@ -1264,16 +1268,16 @@
       "aliases": [
         "workflow status"
       ],
-      "mappings": [
+      "close_mappings": [
         "http://purl.org/ontology/bibo/status"
       ],
       "domain": "Element",
-      "slot_uri": "http://purl.org/ontology/bibo/status",
+      "slot_uri": "https://w3id.org/linkml/status",
       "owner": "status",
       "domain_of": [
         "CommonMetadata"
       ],
-      "range": "uriorcurie",
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
@@ -6824,7 +6828,7 @@
       "name": "Anything",
       "definition_uri": "https://w3id.org/linkml/Anything",
       "from_schema": "https://w3id.org/linkml/meta",
-      "mappings": [
+      "exact_mappings": [
         "linkml:Any"
       ],
       "slot_usage": {},
@@ -7570,7 +7574,7 @@
       "definition_uri": "https://w3id.org/linkml/StructuredAlias",
       "description": "object that contains meta data about a synonym or alias including where it came from (source) and its scope (narrow, broad, etc.)",
       "from_schema": "https://w3id.org/linkml/meta",
-      "mappings": [
+      "exact_mappings": [
         "skosxl:Label"
       ],
       "mixins": [
@@ -8791,7 +8795,7 @@
       "definition_uri": "https://w3id.org/linkml/AnyValue",
       "from_schema": "https://w3id.org/linkml/extensions",
       "imported_from": "linkml:extensions",
-      "mappings": [
+      "exact_mappings": [
         "linkml:Any"
       ],
       "slot_usage": {},
@@ -8867,7 +8871,7 @@
       "description": "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).",
       "from_schema": "https://w3id.org/linkml/units",
       "imported_from": "linkml:units",
-      "mappings": [
+      "exact_mappings": [
         "qudt:Unit"
       ],
       "slots": [
@@ -8927,11 +8931,10 @@
       "@type": "ClassDefinition"
     }
   ],
-  "metamodel_version": "1.11.0",
+  "metamodel_version": "1.12.0",
   "source_file": "meta.yaml",
-  "source_file_date": "2026-08-31T23:35:12",
-  "source_file_size": 103143,
-  "generation_date": "2026-08-31T23:37:20",
+  "source_file_date": "2026-10-21T16:04:40",
+  "source_file_size": 103176,
   "@type": "SchemaDefinition",
   "@context": [
     "staging/jsonld/meta.context.jsonld",
