@@ -56,8 +56,8 @@ every import in the source LinkML schema.
 
 Mappings MAY choose to selectively import via inspection of all used elements.
 
-For JSON Schema, where each schema maps to its own document, an import is a `$ref` to
-the imported schema's document by its `$id`.
+For JSON Schema in split mode, imports are selective: each use of an element of an
+imported schema is a `$ref` into that schema's document, which is identified by its `$id`.
 
 ### Naming Conventions for Modules
 
@@ -67,6 +67,10 @@ be deterministic.
 
 For example, if the target language has module names as `CamelCase` then a mapping MAY
 translate all module names using a standard camel case string transformation.
+
+For JSON Schema, the module name is the last path segment of the document's `$id`. By
+default the `$id` is the schema `id`, whose last path segment is by convention the schema
+`name`.
 
 Schema level metadata MAY be included in the header of the module. This MAY
 be as comments, but if the target language supports module-level variables or other
@@ -81,6 +85,7 @@ Current implementations:
 | Java          | CamelCase       |
 | Typescript    | CamelCase       |
 | Scala         | CamelCase       |
+| JSON Schema   | Last path segment of the `$id`, by default the schema `id` |
 
 ## Mapping of LinkML Classes
 
