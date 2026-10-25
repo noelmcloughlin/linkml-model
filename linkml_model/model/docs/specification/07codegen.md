@@ -43,6 +43,7 @@ Current implementations:
 | Java          | One file per class  |
 | Typescript    | One file per schema |
 | Scala         | One file per class  |
+| JSON Schema   | One document for the schema and its imports; one document per schema in split mode |
 
 ### Imports
 
@@ -54,6 +55,9 @@ Where modules correspond to structures, there SHOULD be one import in the target
 every import in the source LinkML schema.
 
 Mappings MAY choose to selectively import via inspection of all used elements.
+
+For JSON Schema, where each schema maps to its own document, an import is a `$ref` to
+the imported schema's document by its `$id`.
 
 ### Naming Conventions for Modules
 
